@@ -8,7 +8,7 @@
     - [gitee 个人主页](/demo)
 - 学习资料
     - 编程语言
-        - [LINUX](/demo)
+        - [LINUX](linux/linux.md)
         - [GIT](/git/git.md)
         - [DOCKER](/demo)
         - [JAVA](JAVA/java.md)
@@ -16,6 +16,7 @@
     - [区块链](/demo)
     - [人工智能](AI/AI.md)
     - 数学
+        - [符号表达](math/math.md)
         - [损失函数](/demo)
         - [线性回归](/demo)
 - 道
