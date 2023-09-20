@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+</head>
+<body>
+<div id="app"></div>
+<script>
+    window.$docsify = {
+        name: '学习笔记',
+        repo: 'https://gitee.com/JBY8/study.git',
+        homepage: 'home.md',
+        search: "auto",
+        auto2top: true,
+        routes: {
+            // Basic match w/ return string
+            '/demo': '# 编写内容',
+
+            // RegEx match w/ synchronous function
+            '/bar/(.*)': function (route, matched) {
+                return '# Custom Markdown';
+            },
+
+            // RegEx match w/ asynchronous function
+            '/baz/(.*)': function (route, matched, next) {
+                // Requires `fetch` polyfill for legacy browsers (https://github.github.io/fetch/)
+                fetch('/api/users?id=12345')
+                    .then(function (response) {
+                        next('# Custom Markdown');
+                    })
+                    .catch(function (err) {
+                        // Handle error...
+                    });
+            },
+        },
+    }
+</script>
+<!-- Docsify v4 -->
+<script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+</body>
+</html>
