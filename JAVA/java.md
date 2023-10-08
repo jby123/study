@@ -7,8 +7,11 @@
     String.format("%02X", 10)//0A 十进制转十六进制
 ## BIN 码
     Long.toBinaryString(0xff)//11111111 十六进制转二进制
+    Integer.toHexString(Integer.parseInt("11111111",2)) //ff 二进制转十六进制
 ## 补0
     String.format("%040d", 65)
+
+# 位运算
 ## 位移
     1 << 3: 8 | 8 >> 3: 1
     2 << 3: 16 | 16 >> 3: 2
