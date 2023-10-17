@@ -10,6 +10,24 @@
     Integer.toHexString(Integer.parseInt("11111111",2)) //ff 二进制转十六进制
 ## 补0
     String.format("%040d", 65)
+## 字节数组转十进制
+    byte[] byteArray = {0x01,0x23,0x78,0x12,0x14,0x01,0x32}; // 一个示例字节数组
+    BigInteger bigInteger = new BigInteger(1, byteArray); // 使用字节数组创建BigInteger
+    long decimalValue = bigInteger.longValue();
+    System.out.println(decimalValue);//320473583059250
+## String.format()
+    String.format("字符串类型 %s",10) //字符串类型 10
+    String.format("布尔类型 %b",10) //布尔类型 true
+    String.format("整数类型(十进制) %04d",10) //整数类型(十进制) 0010
+    String.format("整数类型(十六进制) %04X",10) //整数类型(十六进制) 000A
+    String.format("整数类型(八进制) %04o",10) //整数类型(八进制) 0012
+    String.format("浮点类型 %.3f",7.7) //浮点类型 7.700
+    String.format("十六进制浮点类型 %.1a",254.4) //十六进制浮点类型 0x1.0p8
+    String.format("散列码 %h",1010) //散列码 3f2
+    String.format("百分比类型 %d%%",10) //百分比类型 10%
+    String.format("字母A的散列码是：%h",'1') //字母A的散列码是：31
+    String.format("上面价格的指数和浮点数结果的长度较短的是：%.3g", 2 * 0.85) //上面价格的指数和浮点数结果的长度较短的是：1.70
+    String.format("%tF %tT", new Date(), new Date()) //2023-10-17 15:05:20
 
 # 位运算
 ## 位移
