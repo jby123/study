@@ -28,6 +28,7 @@
     String.format("字母A的散列码是：%h",'1') //字母A的散列码是：31
     String.format("上面价格的指数和浮点数结果的长度较短的是：%.3g", 2 * 0.85) //上面价格的指数和浮点数结果的长度较短的是：1.70
     String.format("%tF %tT", new Date(), new Date()) //2023-10-17 15:05:20
+    String.format("%tF %tT", System.currentTimeMillis(), System.currentTimeMillis()) //2023-10-17 15:05:20
 
 # 位运算
 ## 位移
