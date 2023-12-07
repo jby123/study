@@ -14,3 +14,11 @@
     df -hT
     vim /etc/fstab #开机自动挂载
     /dev/sdb1               /data             ext4    defaults        0 0 
+## 不分区挂载
+    mkfs.ext4 /dev/sdb #分区格式换
+    mount /dev/sdb /application #磁盘挂载到指定的目录
+    df -hT
+    vim /etc/fstab #开机自动挂载
+    /dev/sdb               /application             ext4    defaults        0 0 
+## 卸载挂载文件
+    umount /demo
