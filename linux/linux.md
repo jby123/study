@@ -22,3 +22,7 @@
     /dev/sdb               /application             ext4    defaults        0 0 
 ## 卸载挂载文件
     umount /demo
+
+# 其他
+## 工具
+    tail -f -n  -1000 20231209.csv | grep 1,2,
